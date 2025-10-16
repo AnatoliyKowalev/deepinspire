@@ -1,0 +1,7 @@
+.font-rubik {
+  font-family: var(--font-rubik, "Rubik", sans-serif) !important;
+}
+
+/* .font-lora {
+  font-family: var(--font-lora, "Lora", sans-serif) !important;
+} */
