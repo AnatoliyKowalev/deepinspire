@@ -8,7 +8,7 @@ import { INTRO_LINKS, INTRO_LIST } from "./constants";
 const Intro: FC = () => {
   return (
     <section className="h-screen bg-accent-dark pt-39 xs:pt-31 md:pt-39 sxs:pr-8 font-montserrat xs:pl-15 1xl:pt-54 md:min-h-[1000px] xl:min-h-auto xl:h-[650px] xl:h-[970px] relative">
-      <div className="container h-full text-light-texting font-medium flex flex-col gap-4 xs:gap-5 xl:gap-12 xs:text-base xl:pb-15 1xl:justify-between">
+      <div className="container h-full text-light-texting font-medium flex flex-col gap-4 xs:gap-5 xl:gap-12 xs:text-base xl:pb-15 1xl:justify-between 1xl:text-xl">
         <h1 className="font-bold relative text-[28px]/normal xs:text-[30px]/normal 1xl:text-4xl max-w-[590px]">
           Boutique software development company that bridges business and
           technology.

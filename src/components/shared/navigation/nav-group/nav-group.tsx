@@ -30,7 +30,7 @@ const NavGroup: FC<PropsWithChildren<NavGroupProps>> = ({
       <button className={`${STYLE_MODIFIERS.withRightCaret} h-link`}>
         {children}
       </button>
-      <div className="fixed left-0 top-(--h-header) w-screen bg-grey-3/95 backdrop-blur-[25px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+      <div className="fixed left-0 top-(--h-header) w-screen bg-grey-3/95 backdrop-blur-[25px] opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50">
         <div className="container gap-6 grid grid-cols-12">
           <div className="grid gap-12 col-span-7 pt-15 pb-12">
             {blocks.map((block, idx) => (

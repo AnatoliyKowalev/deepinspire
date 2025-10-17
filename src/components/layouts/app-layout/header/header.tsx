@@ -5,9 +5,8 @@ import Link from "next/link";
 
 import MobileNav from "./mobile-nav";
 import DesktopNav from "./desktop-nav";
+import Icon from "@/components/shared/icon";
 import { Button } from "@/components/ui/button";
-
-import LogoIcon from "@/../public/svg/logo.svg";
 
 import { cn } from "@/lib/utils";
 
@@ -46,7 +45,10 @@ export default function Header() {
             ))}
           </button>
           <Link href="#">
-            <LogoIcon className="text-light-texting" />
+            <Icon
+              icon="logo"
+              className="text-light-texting text-4xl xl:text-[32px]"
+            />
           </Link>
           <DesktopNav />
           <Button variant="outline" asChild>

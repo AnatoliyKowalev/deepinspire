@@ -1,5 +1,7 @@
 import React, { FC } from "react";
 
+import Icon from "@/components/shared/icon";
+
 import { cn } from "@/lib/utils";
 import { ICONS } from "./constants";
 
@@ -9,12 +11,12 @@ const SocialMediaLinks: FC<DivProps> = ({ className }) => {
   return (
     <div
       className={cn(
-        "flex items-center justify-center gap-10 text-white",
+        "flex items-center justify-center gap-10  text-white text-2xl",
         className
       )}
     >
-      {ICONS.map((Icon, idx) => (
-        <Icon key={idx} />
+      {ICONS.map((icon, idx) => (
+        <Icon icon={icon} key={idx} />
       ))}
     </div>
   );

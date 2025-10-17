@@ -1,6 +1,6 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.woff?z8h2l7") format("woff");
+  src: url("fonts/icomoon.woff?62tr5h") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -22,6 +22,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-logo:before {
+  content: "\e907";
+}
+.icon-facebook:before {
+  content: "\e902";
+}
+.icon-instagram:before {
+  content: "\e903";
+}
+.icon-linkedin:before {
+  content: "\e904";
+}
+.icon-x:before {
+  content: "\e905";
+}
+.icon-youtube:before {
+  content: "\e906";
+}
 .icon-goto:before {
   content: "\e901";
 }
