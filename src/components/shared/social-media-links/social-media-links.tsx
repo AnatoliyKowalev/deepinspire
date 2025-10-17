@@ -5,9 +5,9 @@ import Icon from "@/components/shared/icon";
 import { cn } from "@/lib/utils";
 import { ICONS } from "./constants";
 
-import { DivProps } from "@/types/common";
+import { ElProps } from "@/types/common";
 
-const SocialMediaLinks: FC<DivProps> = ({ className }) => {
+const SocialMediaLinks: FC<ElProps> = ({ className }) => {
   return (
     <div
       className={cn(

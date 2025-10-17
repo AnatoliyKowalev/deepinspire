@@ -9,6 +9,7 @@ import Icon from "@/components/shared/icon";
 import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
+import { ARR_3 } from "@/lib/constants";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function Header() {
             onClick={() => setOpen(!open)}
             className="relative w-[22px] h-[22px] flex flex-col justify-between xl:hidden group"
           >
-            {[1, 2, 3].map((line) => (
+            {ARR_3.map((line) => (
               <span
                 className={cn(
                   "block h-[2px] w-full bg-light-texting/80 rounded-sm transition-all duration-300",

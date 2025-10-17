@@ -5,4 +5,4 @@ export type TypeImgReq = {
   alt: string;
 };
 
-export type DivProps = HTMLAttributes<HTMLDivElement>;
+export type ElProps = HTMLAttributes<HTMLElement>;
