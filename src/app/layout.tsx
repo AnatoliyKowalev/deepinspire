@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { Rubik } from "next/font/google";
+import { Roboto, Montserrat } from "next/font/google";
 
 import AppLayout from "@/components/layouts/app-layout";
 
@@ -8,10 +8,17 @@ import { METADATA } from "./constants";
 import "./globals.css";
 import "@/resources/styles/main.css";
 
-const rubik = Rubik({
-  weight: ["400"],
+const roboto = Roboto({
+  weight: ["400", "500"],
   subsets: ["cyrillic"],
-  variable: "--font-rubik",
+  variable: "--font-roboto",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  weight: ["400", "500", "700"],
+  subsets: ["cyrillic"],
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -29,7 +36,7 @@ export default async function RootLayout({
   const lang = langCookie?.value || "uk";
 
   return (
-    <html lang={lang} className={`${rubik.variable}`}>
+    <html lang={lang} className={`${montserrat.variable}`}>
       <head>
         <title>Custom Software Development Company | DeepInspire</title>
         {/* <meta property="og:image" content={`${SITE_URL}/share-og.jpg`} /> */}
@@ -38,7 +45,9 @@ export default async function RootLayout({
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className="font-rubik text-sm text-dark-texting antialiased light">
+      <body
+        className={`${roboto.className} text-sm text-dark-texting antialiased light overflow-x-hidden`}
+      >
         <AppLayout>{children}</AppLayout>
       </body>
     </html>

@@ -1,17 +1,22 @@
 @import "tailwindcss";
 
 @theme {
+  --font-montserrat: "Montserrat", "Montserrat Fallback", sans-serif;
+
   --color-accent-dark: #1c1920;
   --color-grey-2: #9c9fa8;
   --color-grey-3: #27272e;
   --color-dark-texting: #212529;
   --color-light-texting: #f6f7fb;
 
+  --text-4xl: 40px;
+
   --breakpoint-xs: 350px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1280px;
+  --breakpoint-1xl: 1480px;
   --breakpoint-2xl: 1920px;
 
   --container-lg: 820px;

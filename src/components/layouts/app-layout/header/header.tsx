@@ -23,7 +23,7 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="fixed top-0 left-0 w-screen bg-accent-dark/70 shadow-(--header-shadow) h-(--h-header) text-grey-2">
+    <header className="fixed top-0 left-0 w-screen bg-accent-dark/70 shadow-(--header-shadow) h-(--h-header) text-grey-2 z-10">
       <div className="container h-full">
         <div className="flex items-center justify-start xl:justify-between gap-5 h-full">
           {/* <!-- Mobile burger menu trigger --> */}
