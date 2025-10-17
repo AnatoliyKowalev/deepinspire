@@ -34,7 +34,7 @@ const WhoWeAre: FC = () => {
   }, [progressSpring]);
 
   return (
-    <div
+    <section
       ref={containerRef}
       className="container py-30 grid grid-cols-1 lg:grid-cols-12"
     >
@@ -57,7 +57,7 @@ const WhoWeAre: FC = () => {
           </BtScrollSlide>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
