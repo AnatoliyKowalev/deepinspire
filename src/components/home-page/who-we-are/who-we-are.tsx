@@ -27,8 +27,8 @@ const WhoWeAre: FC = () => {
 
   useEffect(() => {
     return progressSpring.on("change", (v) => {
-      if (v < 0.3) setProgress(1);
-      else if (v < 0.75) setProgress(2);
+      if (v < 0.1) setProgress(1);
+      else if (v < 0.7) setProgress(2);
       else setProgress(3);
     });
   }, [progressSpring]);
