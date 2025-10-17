@@ -13,7 +13,7 @@ const NavDropdown: FC<PropsWithChildren<NavDropdownProps>> = ({
   const toggleOpen = () => setOpen((prev) => !prev);
 
   return (
-    <div className="flex-col h-link min-h-fit">
+    <div className="flex-col h-link !h-fit">
       <div
         onClick={toggleOpen}
         className={`${STYLE_MODIFIERS.withRightCaret} h-link flex justify-between items-center w-full
