@@ -38,10 +38,7 @@ const WhoWeAre: FC = () => {
       ref={containerRef}
       className="container py-30 grid grid-cols-1 lg:grid-cols-12"
     >
-      <BtSlide
-        className="grid place-content-start place-items-start col-span-3 pt-2 h-fit lg:sticky lg:top-[30%]"
-        amount={0.08}
-      >
+      <BtSlide className="grid place-content-start place-items-start col-span-3 pt-2 h-fit lg:sticky lg:top-[30%]">
         <SectionName className="mb-10 md:mb-15 lg:mb-12 1xl:mb-15">
           WHO WE ARE:
         </SectionName>

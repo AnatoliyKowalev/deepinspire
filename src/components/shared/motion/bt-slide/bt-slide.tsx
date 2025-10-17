@@ -3,13 +3,9 @@
 import { FC, PropsWithChildren } from "react";
 import { motion } from "framer-motion";
 
-import { BtSlideProps } from "./interfaces";
+import { ElProps } from "@/types/common";
 
-const BtSlide: FC<PropsWithChildren<BtSlideProps>> = ({
-  children,
-  className,
-  amount = 0.2,
-}) => {
+const BtSlide: FC<PropsWithChildren<ElProps>> = ({ children, className }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
