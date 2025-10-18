@@ -8,8 +8,12 @@
   --color-grey-3: #27272e;
   --color-dark-texting: #212529;
   --color-light-texting: #f6f7fb;
+  --color-accent-secondary: #ed1d2c;
 
   --text-4xl: 40px;
+
+  --shadow-header: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  --shadow-menu: 0 2px 10px rgba(0, 0, 0, 0.1);
 
   --breakpoint-xs: 350px;
   --breakpoint-sm: 640px;
@@ -25,8 +29,6 @@
 
 :root {
   --h-header: 76px;
-
-  --header-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 @utility container {

@@ -1,8 +1,9 @@
 import React, { FC, PropsWithChildren, useState } from "react";
 
-import { STYLE_MODIFIERS } from "@/lib/style-mofifiers";
+import { SM } from "@/lib/style-mofifiers";
 
 import { NavDropdownProps } from "./interfaces";
+import { cn } from "@/lib/utils";
 
 const NavDropdown: FC<PropsWithChildren<NavDropdownProps>> = ({
   name,
@@ -13,11 +14,14 @@ const NavDropdown: FC<PropsWithChildren<NavDropdownProps>> = ({
   const toggleOpen = () => setOpen((prev) => !prev);
 
   return (
-    <div className="flex-col h-link !h-fit">
+    <div
+      className={cn("group flex-col h-link !h-fit", {
+        open,
+      })}
+    >
       <div
         onClick={toggleOpen}
-        className={`${STYLE_MODIFIERS.withRightCaret} h-link flex justify-between items-center w-full
-        after:rotate-[${open ? "135deg" : "-45deg"}]`}
+        className={`${SM.withRightCaret} h-link flex justify-between items-center w-full after:rotate-[-45deg] group-[.open]:after:rotate-[135deg] group-[.hs]/header:group-[.open]:text-accent-secondary group-[.hs]/header:group-[.open]:after:border-accent-secondary`}
         role="button"
       >
         {name}

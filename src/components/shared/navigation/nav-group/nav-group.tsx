@@ -5,7 +5,7 @@ import { GoArrowRight } from "react-icons/go";
 import NavDropdown from "./nav-dropdown";
 import NavLinks from "@/components/shared/navigation/nav-links";
 
-import { STYLE_MODIFIERS } from "@/lib/style-mofifiers";
+import { SM } from "@/lib/style-mofifiers";
 
 import { NavGroupProps } from "./interfaces";
 
@@ -19,7 +19,7 @@ const NavGroup: FC<PropsWithChildren<NavGroupProps>> = ({
 
   return isMobile ? (
     <NavDropdown name={children}>
-      <div className="grid gap-10 pt-4 pb-7 w-full">
+      <div className="grid gap-10 pt-4 pb-7 w-full pl-4 lg:pl-0">
         {blocks.map((block) =>
           block.map((option, idx) => <NavLinks {...option} key={idx} />)
         )}
@@ -27,10 +27,8 @@ const NavGroup: FC<PropsWithChildren<NavGroupProps>> = ({
     </NavDropdown>
   ) : (
     <div className="group">
-      <button className={`${STYLE_MODIFIERS.withRightCaret} h-link`}>
-        {children}
-      </button>
-      <div className="fixed left-0 top-(--h-header) w-screen bg-grey-3/95 backdrop-blur-[25px] opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50">
+      <button className={`h-link ${SM.withRightCaret}`}>{children}</button>
+      <div className="fixed left-0 top-(--h-header) w-screen before:bg-grey-3/95 group-[.hs]/header:before:bg-white before:backdrop-blur-[25px] opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50 before:content-[''] before:w-full before:h-full before:pointer-events-none before:left-0 before-top-0 before:absolute before:z-0 after:content-[''] after:h-[50%] after:w-full after:shadow-menu after:absolute after:left-0 after:bottom-0 after:pointer-events-none after:-z-1">
         <div className="container gap-6 grid grid-cols-12">
           <div className="grid gap-12 col-span-7 pt-15 pb-12">
             {blocks.map((block, idx) => (
