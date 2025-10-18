@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, PropsWithChildren, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { ElProps } from "@/types/common";
 
