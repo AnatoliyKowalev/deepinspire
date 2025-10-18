@@ -41,9 +41,9 @@ const WhoWeAre: FC = () => {
   return (
     <section
       ref={containerRef}
-      className="container py-30 grid grid-cols-1 lg:grid-cols-12 relative"
+      className="container pt-30 pb-15 xs:pb-20 md:pb-25 lg:pb-30 flex flex-col lg:grid lg:grid-cols-12 relative"
     >
-      <BtSlide className="grid place-content-start place-items-start col-span-3 pt-2 h-fit lg:sticky lg:top-[30%]">
+      <BtSlide className="grid place-content-start place-items-start lg:col-span-3 pt-2 h-fit lg:sticky lg:top-[30%]">
         <SectionName className="mb-10 md:mb-15 lg:mb-12 1xl:mb-15">
           WHO WE ARE:
         </SectionName>
@@ -61,7 +61,7 @@ const WhoWeAre: FC = () => {
       </div>
       <Icon
         className={cn(
-          "text-[115px] text-dividers opacity-0 sticky Atransform Atranslate-x-23 top-[30%] h-fit pointer-events-none transition-all duration-300 animate-deepspinner col-span-1 col-start-12",
+          "text-[115px] text-dividers opacity-0 sticky top-[30%] h-fit pointer-events-none transition-all duration-300 animate-deepspinner col-span-1 col-start-12 hidden lg:block 1xl:transform 1xl:translate-x-full",
           {
             "lg:opacity-100": showDeepspinner,
           }
