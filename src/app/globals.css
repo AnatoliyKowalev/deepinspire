@@ -9,6 +9,12 @@
   --color-dark-texting: #212529;
   --color-light-texting: #f6f7fb;
   --color-accent-secondary: #ed1d2c;
+  --color-dividers: #dde0ec;
+  --color-snuff: #e9dbf2;
+  --color-champagne: #f9e8d4;
+
+  --animate-deepspinner: spin 12s linear infinite;
+  --animate-infinite-scroll: infinite-scroll 20s linear infinite;
 
   --text-4xl: 40px;
 
@@ -25,6 +31,15 @@
 
   --container-lg: 820px;
   --container-xl: 1140px;
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 }
 
 :root {
