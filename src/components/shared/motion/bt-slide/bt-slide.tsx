@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, PropsWithChildren, useRef } from "react";
+import { FC, PropsWithChildren } from "react";
 import { motion } from "framer-motion";
 
 import { ElProps } from "@/types/common";
