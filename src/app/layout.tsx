@@ -1,4 +1,3 @@
-import { cookies } from "next/headers";
 import { Roboto, Montserrat } from "next/font/google";
 
 import AppLayout from "@/components/layouts/app-layout";
@@ -31,12 +30,8 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = await cookies();
-  const langCookie = cookieStore.get("NEXT_LOCALE");
-  const lang = langCookie?.value || "uk";
-
   return (
-    <html lang={lang} className={`${montserrat.variable}`}>
+    <html lang="en" className={`${montserrat.variable}`}>
       <head>
         <title>Custom Software Development Company | DeepInspire</title>
         {/* <meta property="og:image" content={`${SITE_URL}/share-og.jpg`} /> */}
