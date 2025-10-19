@@ -39,7 +39,7 @@ const IntroVideo: FC = () => {
         muted
         loop
         preload="metadata"
-        poster="/img/home-intro.png"
+        poster="/img/home/intro.png"
       >
         Your browser does not support the video tag.
       </video>

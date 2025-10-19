@@ -4,12 +4,14 @@
   --font-montserrat: "Montserrat", "Montserrat Fallback", sans-serif;
 
   --color-accent-dark: #1c1920;
+  --color-accent-secondary: #ed1d2c;
+  --color-accent-primary: #16b1ff;
   --color-grey-2: #9c9fa8;
   --color-grey-3: #27272e;
   --color-mid-gray: #646373;
   --color-dark-texting: #212529;
   --color-light-texting: #f6f7fb;
-  --color-accent-secondary: #ed1d2c;
+
   --color-dividers: #dde0ec;
   --color-snuff: #e9dbf2;
   --color-champagne: #f9e8d4;

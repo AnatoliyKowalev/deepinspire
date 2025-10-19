@@ -53,7 +53,7 @@ export default function Header() {
           {/* <!-- Mobile burger menu trigger --> */}
           <button
             onClick={() => setOpen(!open)}
-            className="relative w-[22px] h-[22px] flex flex-col justify-between xl:hidden group"
+            className="relative w-[22px] h-[22px] flex flex-col justify-between xl:hidden group cursor-pointer"
           >
             {ARR_3.map((line) => (
               <span

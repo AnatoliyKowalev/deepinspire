@@ -1,6 +1,5 @@
 import React, { FC, PropsWithChildren } from "react";
 import Image from "next/image";
-import { GoArrowRight } from "react-icons/go";
 
 import NavDropdown from "./nav-dropdown";
 import NavLinks from "@/components/shared/navigation/nav-links";
@@ -8,6 +7,7 @@ import NavLinks from "@/components/shared/navigation/nav-links";
 import { SM } from "@/lib/style-mofifiers";
 
 import { NavGroupProps } from "./interfaces";
+import Icon from "../../icon";
 
 const NavGroup: FC<PropsWithChildren<NavGroupProps>> = ({
   children,
@@ -53,9 +53,9 @@ const NavGroup: FC<PropsWithChildren<NavGroupProps>> = ({
             <div className="p-7 bg-grey-3/90 absolute left-0 bottom-0 w-full grid gap-5 opacity-0 group-hover/info:opacity-100 group-hover/info:translate-y-[0px] transform translate-y-[10px] transition-all duration-200 ease-linear">
               <h6 className="text-white text-lg w-fit relative">
                 {info.title}
-                <GoArrowRight
-                  className="absolute -right-4 top-[50%] transform translate-x-[100%] translate-y-[-50%]"
-                  size={24}
+                <Icon
+                  className="absolute -right-2 top-[50%] transform translate-x-[100%] translate-y-[-48%] text text-2xl"
+                  icon="arrow-right"
                 />
               </h6>
               <div className="flex items-center gap-4">

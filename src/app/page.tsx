@@ -2,6 +2,7 @@
 
 import React, { FC } from "react";
 
+import Start from "@/components/home-page/start";
 import Intro from "@/components/home-page/intro";
 import Counters from "@/components/home-page/counters";
 import Services from "@/components/home-page/services";
@@ -16,6 +17,7 @@ const HomePage: FC = () => {
       <Counters />
       <OurClients />
       <Services />
+      <Start />
       <div className="bg-[pink] h-[100vh] z-[-1] relative"></div>
     </>
   );
