@@ -9,7 +9,12 @@ const SectionName: FC<PropsWithChildren<ElProps>> = ({
   className,
 }) => {
   return (
-    <h5 className={cn("font-montserrat font-bold text-xl", className)}>
+    <h5
+      className={cn(
+        "font-montserrat leading-normal font-bold text-xl",
+        className
+      )}
+    >
       {children}
     </h5>
   );
