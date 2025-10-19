@@ -16,7 +16,7 @@ const MobileNav: FC<MobileNavProps> = ({ open }) => {
     >
       <div className="container h-fit min-h-full flex flex-col divide-y divide-gray-100 [&>.h-link]:border-none [&_.h-link]:h-21 [&_.h-link]:font-bold [&>.h-link]:flex [&>.h-link]:items-center [&>.h-link:not(:last-of-type)]:border-b [&>.h-link:not(:last-of-type)]:border-solid [&>.h-link:not(:last-of-type)]:border-grey-2/10 group-[.hs]/header:[&>.h-link:not(:last-of-type)]:border-dark-texting/10">
         <ViewNav />
-        <SocialMediaLinks className="mt-auto px-4 py-7 lg:justify-end" />
+        <SocialMediaLinks className="mt-auto px-4 py-7 lg:justify-end group-[.hs]/header:text-dark-texting" />
       </div>
     </nav>
   );

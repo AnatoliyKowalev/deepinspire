@@ -6,12 +6,20 @@
   --color-accent-dark: #1c1920;
   --color-grey-2: #9c9fa8;
   --color-grey-3: #27272e;
+  --color-mid-gray: #646373;
   --color-dark-texting: #212529;
   --color-light-texting: #f6f7fb;
   --color-accent-secondary: #ed1d2c;
   --color-dividers: #dde0ec;
   --color-snuff: #e9dbf2;
   --color-champagne: #f9e8d4;
+
+  --gradient-1: linear-gradient(
+    90deg,
+    #dfbdab 0%,
+    #e0c6df 64.06%,
+    #dbd7f3 100%
+  );
 
   --animate-deepspinner: spin 12s linear infinite;
   --animate-infinite-scroll: infinite-scroll 20s linear infinite;

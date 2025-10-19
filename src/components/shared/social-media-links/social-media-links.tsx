@@ -11,7 +11,7 @@ const SocialMediaLinks: FC<ElProps> = ({ className }) => {
   return (
     <div
       className={cn(
-        "flex items-center justify-center gap-10  text-white text-2xl",
+        "flex items-center justify-center gap-10 text-white text-2xl",
         className
       )}
     >

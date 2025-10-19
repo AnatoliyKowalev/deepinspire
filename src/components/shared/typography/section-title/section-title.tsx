@@ -4,20 +4,20 @@ import { cn } from "@/lib/utils";
 
 import { ElProps } from "@/types/common";
 
-const SectionName: FC<PropsWithChildren<ElProps>> = ({
+const SectionTitle: FC<PropsWithChildren<ElProps>> = ({
   className,
   children,
 }) => {
   return (
-    <h5
+    <h4
       className={cn(
-        "font-montserrat leading-normal font-bold text-xl",
+        "leading-none font-medium text-4xl xs:text-[50px]",
         className
       )}
     >
       {children}
-    </h5>
+    </h4>
   );
 };
 
-export default SectionName;
+export default SectionTitle;
