@@ -5,10 +5,9 @@ import { useScroll, useSpring } from "framer-motion";
 
 import Icon from "@/components/shared/icon";
 import InfoBlock from "./components/info-block";
-import BtSlide from "@/components/shared/motion/bt-slide";
 import ScrollIndicator from "./components/scroll-indicator";
-import SectionName from "@/components/shared/typography/section-name";
-import BtScrollSlide from "@/components/shared/motion/bt-scroll-slide";
+import { SectionName } from "@/components/shared/typography";
+import { BtScrollSlide, BtSlide } from "@/components/shared/motion";
 
 import { cn } from "@/lib/utils";
 import { BLOCKS } from "./constants";

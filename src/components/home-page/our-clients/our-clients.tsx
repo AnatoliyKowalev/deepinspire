@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
 
-import SectionName from "@/components/shared/typography/section-name";
+import { SectionName } from "@/components/shared/typography";
 
 import { IMG_CLIENTS } from "./constants";
 

@@ -6,7 +6,8 @@ export interface InfoCardsProps {
 
 export type TypeInfoCard = {
   href: string;
-  icon: string;
+  icon?: string;
   name: string;
-  tags: string[];
+  tags?: string[];
+  className?: string;
 };

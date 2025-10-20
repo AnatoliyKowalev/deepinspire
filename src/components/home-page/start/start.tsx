@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 import Icon from "@/components/shared/icon";
+import { SectionDesc } from "@/components/shared/typography";
 
 const Start: FC = () => {
   const x = useMotionValue(0);
@@ -46,12 +47,12 @@ const Start: FC = () => {
             We start by understanding people’s needs and pains. Then we build
             tech solutions to address them.
           </h4>
-          <p className="text-base/normal">
+          <SectionDesc>
             The best digital products go beyond mere functionality. They create
             an emotional connection and become a significant part of
             people&rsquo;s daily lives. This philosophy drives our approach as a
             boutique software agency committed to meaningful user experiences.
-          </p>
+          </SectionDesc>
         </motion.div>
         <Image
           src="/img/home/fintech.jpg"

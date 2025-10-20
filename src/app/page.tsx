@@ -7,6 +7,7 @@ import Intro from "@/components/home-page/intro";
 import Counters from "@/components/home-page/counters";
 import Services from "@/components/home-page/services";
 import WhoWeAre from "@/components/home-page/who-we-are";
+import Industries from "@/components/home-page/industries";
 import OurClients from "@/components/home-page/our-clients";
 
 const HomePage: FC = () => {
@@ -18,6 +19,7 @@ const HomePage: FC = () => {
       <OurClients />
       <Services />
       <Start />
+      <Industries />
       <div className="bg-[pink] h-[100vh] z-[-1] relative"></div>
     </>
   );

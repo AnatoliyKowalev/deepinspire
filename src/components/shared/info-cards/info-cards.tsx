@@ -1,15 +1,19 @@
 import React, { FC } from "react";
 
 import InfoCard from "./components/info-card";
-import SectionTitle from "../typography/section-title/section-title";
+import { SectionDesc, SectionTitle } from "@/components/shared/typography";
 
 import { InfoCardsProps } from "./interfaces";
 
 const InfoCards: FC<InfoCardsProps> = ({ title, desc, cards }) => {
   return (
     <div className="grid">
-      {title ? <SectionTitle className="mb-5">{title}</SectionTitle> : null}
-      {desc ? <p className="text-base mb-[30px] xs:mb-10">{desc}</p> : null}
+      {title ? <SectionTitle>{title}</SectionTitle> : null}
+      {desc ? (
+        <SectionDesc className="text-base mb-[30px] xs:mb-10">
+          {desc}
+        </SectionDesc>
+      ) : null}
       <div className="md:columns-2 xl:columns-3 xl:grid xl:grid-cols-3 gap-4 xs:gap-6 md:gap-[30px]">
         {cards.map((card, idx) => (
           <div
