@@ -2,13 +2,16 @@
 
 import React, { FC } from "react";
 
-import Start from "@/components/home-page/start";
-import Intro from "@/components/home-page/intro";
-import Counters from "@/components/home-page/counters";
-import Services from "@/components/home-page/services";
-import WhoWeAre from "@/components/home-page/who-we-are";
-import Industries from "@/components/home-page/industries";
-import OurClients from "@/components/home-page/our-clients";
+import {
+  Start,
+  Intro,
+  Counters,
+  Services,
+  WhoWeAre,
+  Industries,
+  OurClients,
+  CaseStudies,
+} from "@/components/home-page";
 
 const HomePage: FC = () => {
   return (
@@ -20,6 +23,7 @@ const HomePage: FC = () => {
       <Services />
       <Start />
       <Industries />
+      <CaseStudies />
       <div className="bg-[pink] h-[100vh] z-[-1] relative"></div>
     </>
   );

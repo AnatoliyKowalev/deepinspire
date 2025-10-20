@@ -1,6 +1,6 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.woff?ws4aq3") format("woff");
+  src: url("fonts/icomoon.woff?a3v3vx") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -63,6 +63,12 @@
 }
 .icon-deepspinner:before {
   content: "\e908";
+}
+.icon-caret-down:before {
+  content: "\e917";
+}
+.icon-caret-right:before {
+  content: "\e918";
 }
 .icon-logo:before {
   content: "\e907";

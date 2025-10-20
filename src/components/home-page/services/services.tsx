@@ -3,11 +3,13 @@ import React, { FC } from "react";
 import InfoCards from "@/components/shared/info-cards";
 import { SectionName } from "@/components/shared/typography";
 
+import { cn } from "@/lib/utils";
+import { SM } from "@/lib/style-mofifiers";
 import { ADVIZORY, ENGINEERING } from "./constants";
 
 const Services: FC = () => {
   return (
-    <section className="container py-15 xs:py-20 md:py-25 xl:py-30">
+    <section className={cn("container", SM.sectionPadding)}>
       <SectionName withMb>SERVICES:</SectionName>
       <div className="grid gap-15 xs:gap-20 lg:gap-25 xl:gap-30">
         <InfoCards

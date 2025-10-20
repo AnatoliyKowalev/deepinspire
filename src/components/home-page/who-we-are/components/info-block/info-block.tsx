@@ -11,7 +11,9 @@ const InfoBlock: FC<PropsWithChildren<InfoBlockProps>> = ({
       <h2 className="text-2xl leading-normal font-medium xs:text-3xl 1xl:text-4xl">
         {title}
       </h2>
-      <p className="leading-loose text-base xs:text-lg">{children}</p>
+      <p className="leading-[27px] xs:leading-[29px] lg:leading-9 text-base xs:text-lg">
+        {children}
+      </p>
     </div>
   );
 };

@@ -48,7 +48,7 @@ const WhoWeAre: FC = () => {
         </SectionName>
         <ScrollIndicator progress={progress} />
       </BtSlide>
-      <div className="grid gap-10 md:gap-15 lg:col-span-6 1xl:col-span-8">
+      <div className="grid gap-10 md:gap-15 lg:col-span-7 xl:max-w-153 1xl:col-span-8 1xl:max-w-182">
         <BtSlide>
           <InfoBlock title={BLOCKS[0].title}>{BLOCKS[0].text}</InfoBlock>
         </BtSlide>

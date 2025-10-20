@@ -8,11 +8,18 @@ import {
   SectionTitle,
 } from "@/components/shared/typography";
 
+import { cn } from "@/lib/utils";
+import { SM } from "@/lib/style-mofifiers";
 import { INDUSTRIES_LINKS } from "./constants";
 
 const Industries: FC = () => {
   return (
-    <section className="bg-light-texting overflow-hidden py-15 xs:py-20 md:py-25 xl:py-30 grid gap-10 xs:gap-14">
+    <section
+      className={cn(
+        "bg-light-texting overflow-hidden grid gap-10 xs:gap-14",
+        SM.sectionPadding
+      )}
+    >
       <div className="container grid gap-10 lg:grid-cols-12 lg:gap-7 xl:gap-0">
         <div className="lg:col-span-7">
           <SectionName withMb>INDUSTRIES:</SectionName>

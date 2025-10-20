@@ -1,0 +1,19 @@
+import Start from "./start";
+import Intro from "./intro";
+import Counters from "./counters";
+import Services from "./services";
+import WhoWeAre from "./who-we-are";
+import Industries from "./industries";
+import OurClients from "./our-clients";
+import CaseStudies from "./case-studies";
+
+export {
+  Start,
+  Intro,
+  Counters,
+  Services,
+  WhoWeAre,
+  Industries,
+  OurClients,
+  CaseStudies,
+};
