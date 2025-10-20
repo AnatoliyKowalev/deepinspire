@@ -6,6 +6,7 @@ import WhoWeAre from "./who-we-are";
 import Industries from "./industries";
 import OurClients from "./our-clients";
 import CaseStudies from "./case-studies";
+import Testimonials from "./testimonials";
 
 export {
   Start,
@@ -16,4 +17,5 @@ export {
   Industries,
   OurClients,
   CaseStudies,
+  Testimonials,
 };

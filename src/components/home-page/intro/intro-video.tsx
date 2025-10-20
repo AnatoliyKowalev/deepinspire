@@ -22,8 +22,8 @@ const IntroVideo: FC = () => {
       (canPlayWebM === "probably" || canPlayWebM === "maybe") && !isSafari;
 
     video.src = useWebM
-      ? "/video/home-intro.webm"
-      : "/video/home-intro-safari.mp4";
+      ? "/video/home/intro.webm"
+      : "/video/home/intro-safari.mp4";
 
     video.load();
     video.play().catch(() => {});

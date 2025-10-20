@@ -16,13 +16,6 @@
   --color-snuff: #e9dbf2;
   --color-champagne: #f9e8d4;
 
-  --gradient-1: linear-gradient(
-    90deg,
-    #dfbdab 0%,
-    #e0c6df 64.06%,
-    #dbd7f3 100%
-  );
-
   --animate-deepspinner: spin 12s linear infinite;
   --animate-infinite-scroll: infinite-scroll 20s linear infinite;
 

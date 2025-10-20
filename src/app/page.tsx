@@ -11,6 +11,7 @@ import {
   Industries,
   OurClients,
   CaseStudies,
+  Testimonials,
 } from "@/components/home-page";
 
 const HomePage: FC = () => {
@@ -24,6 +25,7 @@ const HomePage: FC = () => {
       <Start />
       <Industries />
       <CaseStudies />
+      <Testimonials />
       <div className="bg-[pink] h-[100vh] z-[-1] relative"></div>
     </>
   );
