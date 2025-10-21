@@ -1,6 +1,6 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.woff?1fykd2") format("woff");
+  src: url("fonts/icomoon.woff?xdlwuc") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -22,6 +22,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close:before {
+  content: "\e91b";
+}
 .icon-play:before {
   content: "\e919";
 }

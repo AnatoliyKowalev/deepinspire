@@ -5,7 +5,7 @@ export const TESTIMONIALS = [
     name: "Craig",
     desc: "VP Enterprise at Voice Biometrics , \n United Kingdom",
     video: "/video/home/craig_preload.mp4",
-    youtube: "https://youtu.be/BaqM15lkS44",
+    youtube: "https://www.youtube.com/embed/BaqM15lkS44",
     preload: "/img/home/craig.jpg",
   },
   {
@@ -14,7 +14,7 @@ export const TESTIMONIALS = [
     name: "Patrick Leahy",
     desc: "Co-founder at Elva,\n the Financial Wellness Company, \n United Kingdom",
     video: "/video/home/patrik_preload.mp4",
-    youtube: "https://youtu.be/sTgJOByLD5k",
+    youtube: "https://www.youtube.com/embed/sTgJOByLD5k",
     preload: "/img/home/patrick.jpg",
     reverse: true,
   },
