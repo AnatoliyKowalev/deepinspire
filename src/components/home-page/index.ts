@@ -5,6 +5,7 @@ import Services from "./services";
 import WhoWeAre from "./who-we-are";
 import Industries from "./industries";
 import OurClients from "./our-clients";
+import MoreReviews from "./more-reviews";
 import CaseStudies from "./case-studies";
 import Testimonials from "./testimonials";
 
@@ -16,6 +17,7 @@ export {
   WhoWeAre,
   Industries,
   OurClients,
+  MoreReviews,
   CaseStudies,
   Testimonials,
 };
