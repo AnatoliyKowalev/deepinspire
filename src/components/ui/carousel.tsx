@@ -1,14 +1,16 @@
 "use client";
 
 import * as React from "react";
+import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+
+import Icon from "@/components/shared/icon";
+import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { useCallback, useEffect, useState } from "react";
+import { SM } from "@/lib/style-mofifiers";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -121,7 +123,10 @@ function Carousel({
     >
       <div
         onKeyDownCapture={handleKeyDown}
-        className={cn("relative", className)}
+        className={cn(
+          "relative xs:flex xs:items-center xs:justify-center xs:gap-4.5 md:gap-10 xl:gap-0",
+          className
+        )}
         role="region"
         aria-roledescription="carousel"
         data-slot="carousel"
@@ -144,7 +149,7 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
     >
       <div
         className={cn(
-          "flex",
+          "flex transition-[height] duration-200",
           orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
           className
         )}
@@ -163,8 +168,8 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
       aria-roledescription="slide"
       data-slot="carousel-item"
       className={cn(
-        "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
+        "min-w-0 shrink-0 grow-0 basis-full h-fit",
+        orientation === "horizontal" ? "pl-4 xl:pl-15" : "pt-4",
         className
       )}
       {...props}
@@ -186,9 +191,9 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-8 rounded-full cursor-pointer",
+        SM.carouselBtn,
         orientation === "horizontal"
-          ? "top-1/2 -left-12 -translate-y-1/2"
+          ? "top-1/2 left-0 -translate-y-1/2 -translate-x-[65%] xs:translate-x-[0]"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -196,7 +201,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft />
+      <Icon className="text-2xl" icon="caret-left" />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -216,9 +221,9 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-8 rounded-full cursor-pointer",
+        SM.carouselBtn,
         orientation === "horizontal"
-          ? "top-1/2 -right-12 -translate-y-1/2"
+          ? "top-1/2 right-0 -translate-y-1/2 translate-x-[65%] xs:translate-x-[0]"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -226,7 +231,7 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight />
+      <Icon className="text-2xl" icon="caret-right" />
       <span className="sr-only">Next slide</span>
     </Button>
   );
