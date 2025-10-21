@@ -21,7 +21,7 @@ const WhyDeepnspire: FC = () => {
 
   return (
     <section
-      className="relative bg-grey-3 h-134.5 xs:h-110 md:h-142 lg:h-179.5 1xl:h-229 overflow-hidden flex flex-col items-center"
+      className="relative bg-grey-3 h-134.5 xs:h-125 md:h-142 lg:h-179.5 1xl:h-229 overflow-hidden flex flex-col items-center"
       ref={parentRef}
     >
       <div
@@ -38,7 +38,7 @@ const WhyDeepnspire: FC = () => {
         >
           <SectionName>WHY DEEPINSPIRE:</SectionName>
         </motion.div>
-        <div className="font-montserrat font-bold text-[28px]/normal xs:text-[30px]/normal 1xl:text-4xl">
+        <div className="font-montserrat font-bold text-[28px]/normal xs:text-[30px]/normal 1xl:text-4xl whitespace-pre-line xs:whitespace-normal">
           <motion.div
             initial={{ translateY: "40px", opacity: 0 }}
             animate={
@@ -50,10 +50,10 @@ const WhyDeepnspire: FC = () => {
               opacity: { delay: 2.5, duration: 1, ease: "easeOut" },
               translateY: { delay: 2.5, duration: 0.5, ease: "easeOut" },
             }}
-            className="xs:inline md:block md:m-0"
+            className="inline md:block md:m-0"
             key={`${hash}2`}
           >
-            We deliver solutions that bring
+            {`We deliver \n solutions that bring`}
           </motion.div>
           <motion.div
             initial={{ translateY: "40px", opacity: 0 }}
@@ -66,7 +66,7 @@ const WhyDeepnspire: FC = () => {
               opacity: { delay: 2.7, duration: 1, ease: "easeOut" },
               translateY: { delay: 2.7, duration: 0.5, ease: "easeOut" },
             }}
-            className="xs:inline xs:ml-2 md:block md:m-0"
+            className="xs:inline ml-2 md:block md:m-0"
             key={`${hash}3`}
           >
             our clients
@@ -81,14 +81,14 @@ const WhyDeepnspire: FC = () => {
             key={`${hash}4`}
           >
             <Image
-              className="max-w-none hidden xs:block xs:w-105 md:w-150 lg:w-210"
+              className="max-w-none hidden md:block xs:w-105 md:w-150 lg:w-210"
               src="/svg/to-the-next-level.svg"
               width={900}
               height={100}
               alt="To the next level"
             />
             <Image
-              className="max-w-69.25 xs:hidden"
+              className="max-w-69.25 md:hidden"
               src="/svg/to-the-next-level-xs.svg"
               width={900}
               height={100}

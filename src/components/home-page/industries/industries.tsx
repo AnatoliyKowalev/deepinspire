@@ -44,7 +44,7 @@ const Industries: FC = () => {
         />
       </div>
       <div className="container grid lg:grid-cols-12">
-        <div className="grid gap-4 xs:w-[330px] md:w-full md:grid-cols-2 md:gap-x-[30px] md:gap-y-6 lg:gap-x-6 lg:col-span-10 xl:col-span-7">
+        <div className="grid gap-4 mx-auto xs:w-[330px] md:w-full md:grid-cols-2 md:gap-x-[30px] md:gap-y-6 lg:gap-x-6 lg:col-span-10 xl:col-span-7">
           {INDUSTRIES_LINKS.map((link, idx) => (
             <InfoCard
               className="border-none [&_.arr-icon]:opacity-100 hover:[&_.arr-icon]:text-dark-texting active:[&_.arr-icon]:text-dark-texting"

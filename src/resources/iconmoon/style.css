@@ -1,6 +1,6 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.woff?8566p5") format("woff");
+  src: url("fonts/icomoon.woff?uin0jr") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -33,6 +33,18 @@
 }
 .icon-quote-left:before {
   content: "\e91a";
+}
+.icon-graph:before {
+  content: "\e91d";
+}
+.icon-main-component:before {
+  content: "\e91e";
+}
+.icon-rocket-filled:before {
+  content: "\e91f";
+}
+.icon-triangle:before {
+  content: "\e920";
 }
 .icon-lamp:before {
   content: "\e911";

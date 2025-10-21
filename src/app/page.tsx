@@ -10,6 +10,7 @@ import {
   WhoWeAre,
   Industries,
   OurClients,
+  OurApproach,
   MoreReviews,
   CaseStudies,
   Testimonials,
@@ -30,6 +31,7 @@ const HomePage: FC = () => {
       <Testimonials />
       <MoreReviews />
       <WhyDeepnspire />
+      <OurApproach />
       <div className="bg-[pink] h-[100vh] z-[-1] relative"></div>
     </>
   );
