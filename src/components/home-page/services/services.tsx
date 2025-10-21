@@ -9,7 +9,7 @@ import { ADVIZORY, ENGINEERING } from "./constants";
 
 const Services: FC = () => {
   return (
-    <section className={cn("container", SM.sectionPadding)}>
+    <section className={cn("container", SM.sectionPad_xl)}>
       <SectionName withMb>SERVICES:</SectionName>
       <div className="grid gap-15 xs:gap-20 lg:gap-25 xl:gap-30">
         <InfoCards

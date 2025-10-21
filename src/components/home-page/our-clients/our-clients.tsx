@@ -3,11 +3,13 @@ import Image from "next/image";
 
 import { SectionName } from "@/components/shared/typography";
 
+import { cn } from "@/lib/utils";
+import { SM } from "@/lib/style-mofifiers";
 import { IMG_CLIENTS } from "./constants";
 
 const OurClients: FC = () => {
   return (
-    <section className="bg-light-texting py-15 xs:py-20 md:py-25">
+    <section className={cn("bg-light-texting", SM.sectionPad_md)}>
       <div className="container">
         <SectionName className="text-center xs:text-2xl md:text-left mb-8 md:mb-16">
           Our clients:

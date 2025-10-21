@@ -13,6 +13,7 @@ import {
   MoreReviews,
   CaseStudies,
   Testimonials,
+  WhyDeepnspire,
 } from "@/components/home-page";
 
 const HomePage: FC = () => {
@@ -28,6 +29,7 @@ const HomePage: FC = () => {
       <CaseStudies />
       <Testimonials />
       <MoreReviews />
+      <WhyDeepnspire />
       <div className="bg-[pink] h-[100vh] z-[-1] relative"></div>
     </>
   );

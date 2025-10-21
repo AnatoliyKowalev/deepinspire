@@ -17,7 +17,7 @@ const Industries: FC = () => {
     <section
       className={cn(
         "bg-light-texting overflow-hidden grid gap-10 xs:gap-14",
-        SM.sectionPadding
+        SM.sectionPad_xl
       )}
     >
       <div className="container grid gap-10 lg:grid-cols-12 lg:gap-7 xl:gap-0">

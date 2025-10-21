@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 const MoreReviews: FC = () => {
   return (
     <section className="bg-light-texting">
-      <div className="container py-12 md:py-15 gap-8 md:flex justify-center">
+      <div className="container grid py-12 md:py-15 gap-8 md:flex justify-center items-center">
         <h4 className="text-[28px]/normal font-montserrat font-bold text-center grid gap-5 md:flex items-center">
           <Icon className="text-4xl" icon="flash" />
           Check more reviews

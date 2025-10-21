@@ -10,7 +10,7 @@ import { CASE_STUDIES_CARDS } from "./constants";
 
 const CaseStudies: FC = () => {
   return (
-    <section className={cn("container", SM.sectionPadding)}>
+    <section className={cn("container", SM.sectionPad_xl)}>
       <SectionName withMb>CASE STUDIES:</SectionName>
       <SectionTitle className="mb-[30px] xs:mb-10 md:mb-15">
         Check out how we’ve helped our clients succeed.

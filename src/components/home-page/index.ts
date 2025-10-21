@@ -8,6 +8,7 @@ import OurClients from "./our-clients";
 import MoreReviews from "./more-reviews";
 import CaseStudies from "./case-studies";
 import Testimonials from "./testimonials";
+import WhyDeepnspire from "./why-deepnspire";
 
 export {
   Start,
@@ -20,4 +21,5 @@ export {
   MoreReviews,
   CaseStudies,
   Testimonials,
+  WhyDeepnspire,
 };
