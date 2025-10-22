@@ -8,7 +8,7 @@ const IntroVideo: FC = () => (
       className="max-w-none ml-auto w-[calc(100%+50px)] transform translate-x-4 translate-y-2 xs:translate-y-15 xs:w-full md:translate-y-32 md:translate-x-6 md:w-[calc(100%+100px)] lg:w-[95%] xl:w-full xl:translate-y-0 xl:translate-x-50 1xl:translate-x-80 1xl:-translate-y-10"
       webm="/video/home/intro.webm"
       mp4="/video/home/intro-safari.mp4"
-      poster="/img/home/intro.png"
+      poster="/img/home/intro.webp"
       autoPlay
       loop
     />
