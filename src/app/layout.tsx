@@ -5,7 +5,7 @@ import AppLayout from "@/components/layouts/app-layout";
 import { METADATA } from "./constants";
 
 import "./globals.css";
-import "@/resources/styles/main.css";
+import "@/resources/iconmoon/style.css";
 
 const roboto = Roboto({
   weight: ["400", "500"],
