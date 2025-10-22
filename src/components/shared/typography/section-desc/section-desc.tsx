@@ -8,14 +8,10 @@ const SectionDesc: FC<SectionDescProps> = ({
   className,
   secondary = false,
   children,
-}) => {
-  return (
-    <p
-      className={cn("text-base/normal", secondary ? "mt-4" : "mt-5", className)}
-    >
-      {children}
-    </p>
-  );
-};
+}) => (
+  <p className={cn("text-base/normal", secondary ? "mt-4" : "mt-5", className)}>
+    {children}
+  </p>
+);
 
 export default SectionDesc;

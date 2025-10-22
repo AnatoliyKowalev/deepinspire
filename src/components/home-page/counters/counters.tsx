@@ -16,15 +16,13 @@ const AnimatedRow: FC = () => (
   </div>
 );
 
-const Counters: FC = () => {
-  return (
-    <section className="w-screen mb-15 xs:mb-20 md:mb-25 xl:mb-30 overflow-hidden">
-      <div className="flex gap-6 w-full">
-        <AnimatedRow />
-        <AnimatedRow />
-      </div>
-    </section>
-  );
-};
+const Counters: FC = () => (
+  <section className="w-screen mb-15 xs:mb-20 md:mb-25 xl:mb-30 overflow-hidden">
+    <div className="flex gap-6 w-full">
+      <AnimatedRow />
+      <AnimatedRow />
+    </div>
+  </section>
+);
 
 export default Counters;

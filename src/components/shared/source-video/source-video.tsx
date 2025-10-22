@@ -29,7 +29,7 @@ const SourceVideo: FC<SourceVideoProps> = ({ mp4, webm, ref, ...rest }) => {
 
     video.load();
     video.play().catch(() => {});
-  }, []);
+  }, [webm, mp4]);
 
   return (
     <video

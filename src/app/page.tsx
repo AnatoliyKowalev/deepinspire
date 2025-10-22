@@ -17,24 +17,22 @@ import {
   WhyDeepnspire,
 } from "@/components/home-page";
 
-const HomePage: FC = () => {
-  return (
-    <>
-      <Intro />
-      <WhoWeAre />
-      <Counters />
-      <OurClients />
-      <Services />
-      <Start />
-      <Industries />
-      <CaseStudies />
-      <Testimonials />
-      <MoreReviews />
-      <WhyDeepnspire />
-      <OurApproach />
-      <div className="bg-[pink] h-[100vh] z-[-1] relative"></div>
-    </>
-  );
-};
+const HomePage: FC = () => (
+  <>
+    <Intro />
+    <WhoWeAre />
+    <Counters />
+    <OurClients />
+    <Services />
+    <Start />
+    <Industries />
+    <CaseStudies />
+    <Testimonials />
+    <MoreReviews />
+    <WhyDeepnspire />
+    <OurApproach />
+    <div className="bg-[pink] h-[100vh] z-[-1] relative"></div>
+  </>
+);
 
 export default HomePage;

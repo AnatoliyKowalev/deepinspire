@@ -5,16 +5,14 @@ const NavLink: FC<PropsWithChildren<LinkProps>> = ({
   href = "#",
   children,
   ...rest
-}) => {
-  return (
-    <Link
-      href={href}
-      className="h-link hover:text-white group-[.hs]/header:hover:text-accent-secondary"
-      {...rest}
-    >
-      {children}
-    </Link>
-  );
-};
+}) => (
+  <Link
+    href={href}
+    className="h-link hover:text-white group-[.hs]/header:hover:text-accent-secondary"
+    {...rest}
+  >
+    {children}
+  </Link>
+);
 
 export default NavLink;
