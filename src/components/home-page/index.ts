@@ -1,5 +1,6 @@
 import Start from "./start";
 import Intro from "./intro";
+import Awards from "./awards";
 import Counters from "./counters";
 import Services from "./services";
 import WhoWeAre from "./who-we-are";
@@ -14,6 +15,7 @@ import WhyDeepnspire from "./why-deepnspire";
 export {
   Start,
   Intro,
+  Awards,
   Counters,
   Services,
   WhoWeAre,

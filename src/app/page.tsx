@@ -5,6 +5,7 @@ import React, { FC } from "react";
 import {
   Start,
   Intro,
+  Awards,
   Counters,
   Services,
   WhoWeAre,
@@ -31,6 +32,7 @@ const HomePage: FC = () => (
     <MoreReviews />
     <WhyDeepnspire />
     <OurApproach />
+    <Awards />
     <div className="bg-[pink] h-[100vh] z-[-1] relative"></div>
   </>
 );

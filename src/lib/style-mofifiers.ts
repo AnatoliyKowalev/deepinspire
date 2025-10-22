@@ -6,4 +6,6 @@ export const SM = {
   sectionPad_md: "py-15 xs:py-20 md:py-25",
   carouselBtn:
     "text-grey-2 size-10 hover:bg-accent-primary hover:text-white active:bg-accent-primary active:text-white rounded-full cursor-pointer absolute xs:relative xs:translate-y-[8%]",
+  accentPrimaryBtn:
+    "text-accent-primary block text-center text-xl font-bold font-montserrat xs:w-fit flex items-center cursor-pointer",
 };

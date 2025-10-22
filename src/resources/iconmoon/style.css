@@ -1,6 +1,6 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.woff?uin0jr") format("woff");
+  src: url("fonts/icomoon.woff?8t8nyd") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -22,6 +22,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-caret-up:before {
+  content: "\e921";
+}
 .icon-caret-left:before {
   content: "\e91c";
 }

@@ -1,21 +1,18 @@
-import React, { FC } from "react";
-import Link from "next/link";
+import React, { FC, PropsWithChildren } from "react";
+import Link, { LinkProps } from "next/link";
 
 import Icon from "@/components/shared/icon";
 
-import { SeeAllLinkProps } from "./interfaces";
+import { cn } from "@/lib/utils";
+import { SM } from "@/lib/style-mofifiers";
 
-const SeeAllLink: FC<SeeAllLinkProps> = ({
-  href,
-  icon = "caret-right",
-  children,
-}) => (
+const SeeAllLink: FC<PropsWithChildren<LinkProps>> = ({ href, children }) => (
   <Link
     href={href}
-    className="text-accent-primary block text-center text-xl font-bold mt-10 font-montserrat xs:mt-12.5 xs:w-fit md:mt-15 flex items-center"
+    className={cn("mt-10 xs:mt-12.5 md:mt-15", SM.accentPrimaryBtn)}
   >
     {children}
-    <Icon className="text-[32px] mt-0.5" icon={icon} />
+    <Icon className="text-[32px] mt-0.5" icon="caret-right" />
   </Link>
 );
 
