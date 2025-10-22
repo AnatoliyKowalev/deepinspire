@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useRef, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
@@ -114,7 +114,7 @@ const WhyDeepnspire: FC = () => {
           ref={videoRef}
           onEnded={() => setEnded(true)}
           onPlay={() => setEnded(false)}
-          className={`z-0 absolute pointer-events-none object-cover absolute bottom-0 inset-0 w-120 xs:w-130 md:w-175.25 lg:w-218 xl:w-247.5 1xl:w-336 ${ended ? "opacity-0" : "opacity-100"} left-1/2 transform -translate-x-1/2 xs:translate-y-14 md:translate-y-12 lg:translate-y-0 xl:translate-y-10 1xl:translate-y-0 self-end object-center max-w-[1344px]`}
+          className={`z-0 absolute pointer-events-none object-cover absolute top-auto bottom-0 inset-0 w-120 xs:w-130 md:w-175.25 lg:w-218 xl:w-247.5 1xl:w-336 ${ended ? "opacity-0" : "opacity-100"} left-1/2 transform -translate-x-1/2 xs:translate-y-14 md:translate-y-12 lg:translate-y-0 xl:translate-y-10 1xl:translate-y-0 object-center max-w-[1344px]`}
           webm="/video/home/next-level-chrome.webm"
           mp4="/video/home/next-level-safari.mp4"
           poster="/img/home/next-level-frame.png"
