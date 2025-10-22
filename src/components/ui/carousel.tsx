@@ -138,13 +138,17 @@ function Carousel({
   );
 }
 
-function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
+function CarouselContent({
+  className,
+  wrapperClassName,
+  ...props
+}: React.ComponentProps<"div"> & { wrapperClassName?: string }) {
   const { carouselRef, orientation } = useCarousel();
 
   return (
     <div
       ref={carouselRef}
-      className="overflow-hidden"
+      className={cn("overflow-hidden", wrapperClassName)}
       data-slot="carousel-content"
     >
       <div
@@ -267,6 +271,48 @@ function CarouselControls() {
     <span className="absolute top-0 left-2 flex items-center gap-3 text-sm text-muted-foreground -translate-y-6">
       {selectedIndex + 1} / {count}
     </span>
+  );
+}
+
+export function CarouselDots() {
+  const { api } = useCarousel();
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const count = api ? api.scrollSnapList().length : 1;
+
+  const updateCurrent = useCallback(() => {
+    if (!api) return;
+    setSelectedIndex(api.selectedScrollSnap());
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+
+    api.on("select", updateCurrent);
+    api.on("reInit", updateCurrent);
+
+    updateCurrent();
+
+    return () => {
+      api.off("select", updateCurrent);
+      api.off("reInit", updateCurrent);
+    };
+  }, [api, updateCurrent]);
+
+  if (!api) return null;
+
+  return (
+    <div className="flex gap-7 items-center justify-center">
+      {Array.from({ length: count }).map((_, index) => (
+        <button
+          onClick={() => api.scrollTo(index)}
+          className={`relative cursor-pointer size-2.5 rounded-full bg-dark-texting group after:cotnent-[''] after:size-0 after:border after:border-dark-texting after:absolute after:left-1/2 after:top-1/2 after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:transition-size after:duration-300 ${
+            selectedIndex === index ? "after:size-7.5" : ""
+          }`}
+          key={index}
+        />
+      ))}
+    </div>
   );
 }
 
