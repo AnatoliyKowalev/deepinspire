@@ -1,5 +1,6 @@
-import { cn } from "@/lib/utils";
 import React, { FC, PropsWithChildren } from "react";
+
+import { cn } from "@/lib/utils";
 
 const AccentGroup: FC<
   PropsWithChildren<{ name: string; className?: string }>

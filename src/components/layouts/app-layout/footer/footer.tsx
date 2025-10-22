@@ -19,7 +19,7 @@ const Footer: FC = () => {
     document.body.appendChild(script);
 
     setTimeout(() => {
-      // @ts-ignore
+      // @ts-expect-error declared option
       window?.CLUTCHCO?.Init();
     }, 100);
 
