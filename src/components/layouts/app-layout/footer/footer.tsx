@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,24 +12,57 @@ import { YEAR } from "@/lib/constants";
 import { DISCOVER_LINKS } from "./constants";
 
 const Footer: FC = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://widget.clutch.co/static/js/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
+  // useEffect(() => {
+  //   const script = document.createElement("script");
+  //   script.src = "https://widget.clutch.co/static/js/widget.js";
+  //   script.async = true;
+  //   document.body.appendChild(script);
 
-    setTimeout(() => {
-      // @ts-expect-error declared option
-      window?.CLUTCHCO?.Init();
-    }, 100);
+  //   setTimeout(() => {
+  //     // @ts-expect-error declared option
+  //     window?.CLUTCHCO?.Init();
+  //   }, 100);
+
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
+
+  const footerRef = useRef<HTMLElement | null>(null);
+  const [widgetLoaded, setWidgetLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!footerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting && !widgetLoaded) {
+          setWidgetLoaded(true);
+
+          const script = document.createElement("script");
+          script.src = "https://widget.clutch.co/static/js/widget.js";
+          script.async = true;
+          document.body.appendChild(script);
+
+          script.onload = () => {
+            // @ts-expect-error declared option
+            window?.CLUTCHCO?.Init();
+          };
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(footerRef.current);
 
     return () => {
-      document.body.removeChild(script);
+      observer.disconnect();
     };
-  }, []);
+  }, [widgetLoaded]);
 
   return (
-    <footer className="overflow-hidden">
+    <footer className="overflow-hidden" ref={footerRef}>
       <ContactUs />
       <div className="z-1 bg-grey-3 w-full -mt-35 pt-35">
         <div className="container mt-11.5 xs:mt-12.5 md:mt-23 text-light-texting">
