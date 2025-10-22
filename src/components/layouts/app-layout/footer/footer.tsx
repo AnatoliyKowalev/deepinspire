@@ -13,19 +13,17 @@ import { DISCOVER_LINKS } from "./constants";
 
 const Footer: FC = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://widget.clutch.co/static/js/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    setTimeout(() => {
-      // @ts-expect-error declared option
-      window?.CLUTCHCO?.Init();
-    }, 100);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    // const script = document.createElement("script");
+    // script.src = "https://widget.clutch.co/static/js/widget.js";
+    // script.async = true;
+    // document.body.appendChild(script);
+    // setTimeout(() => {
+    //   // @ts-expect-error declared option
+    //   window?.CLUTCHCO?.Init();
+    // }, 100);
+    // return () => {
+    //   document.body.removeChild(script);
+    // };
   }, []);
 
   return (
