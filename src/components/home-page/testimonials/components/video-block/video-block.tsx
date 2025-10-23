@@ -49,7 +49,7 @@ const VideoBlock: FC<VideoBlockProps> = ({
         Watch video
       </Button>
       <video
-        preload="auto"
+        preload="none"
         poster={preload}
         className="h-full md:w-full object-cover absolute left-0 top-0 !z-0"
         playsInline
