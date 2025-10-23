@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Link from "next/link";
 
 import IntroVideo from "./intro-video";
 import Icon from "@/components/shared/icon";
@@ -23,13 +24,18 @@ const Intro: FC = () => (
       </ul>
       <div className="grid gap-4 md:flex md:mt-10 md:items-center md:gap-20">
         {INTRO_LINKS.map(({ link, text }, idx) => (
-          <a href={link} className="relative w-fit" key={idx}>
+          <Link
+            href={link}
+            className="relative w-fit"
+            aria-label={text}
+            key={idx}
+          >
             {text}
             <Icon
               className="text-2xl md:text-[32px] absolute -right-2 md:-right-3 transform translate-x-full translate-y-[-50%] top-[50%]"
               icon="goto"
             />
-          </a>
+          </Link>
         ))}
       </div>
     </div>

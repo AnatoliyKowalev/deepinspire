@@ -86,7 +86,6 @@ const VideoBlock: FC<VideoBlockProps> = ({
         <video
           ref={videoRef}
           preload="none"
-          // poster={preload}
           className="w-full h-full object-cover absolute left-0 top-0 !z-0"
           playsInline
           muted

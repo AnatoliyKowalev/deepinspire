@@ -54,6 +54,7 @@ export default function Header() {
           <button
             onClick={() => setOpen(!open)}
             className="relative w-[22px] h-[22px] flex flex-col justify-between xl:hidden group cursor-pointer"
+            aria-label={open ? "Close menu" : "Open menu"}
           >
             {ARR_3.map((line) => (
               <span
@@ -69,7 +70,7 @@ export default function Header() {
               />
             ))}
           </button>
-          <Link href="#">
+          <Link href="#" aria-label="Logo">
             <Icon
               icon="logo"
               className="text-light-texting group-[.hs]/header:text-accent-secondary text-4xl xl:text-[32px]"

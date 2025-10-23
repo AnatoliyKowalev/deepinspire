@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 import SeeAllLink from "@/components/shared/see-all-link";
@@ -16,7 +17,7 @@ const CaseStudies: FC = () => (
     </SectionTitle>
     <div className="grid gap-4 xs:gap-6 md:gap-10 lg:gap-[30px] xl:gap-[50px] lg:grid-cols-2">
       {CASE_STUDIES_CARDS.map(({ link, name, desc, img }, idx) => (
-        <a
+        <Link
           className="rounded-2xl overflow-hidden relative group"
           href={link}
           key={idx}
@@ -29,14 +30,14 @@ const CaseStudies: FC = () => (
             alt={name}
           />
           <div className="absolute bottom-0 left-0 w-full bg-light-texting/85 backdrop-blur-[10px] p-4 flex flex-col gap-3 xs:p-6 lg:min-h-31 xl:min-h-33">
-            <h5 className="text-base/[20px] font-montserrat font-bold md:text-xl lg:text-base/[20px] xl:text-xl my-auto">
+            <div className="text-base/[20px] font-montserrat font-bold md:text-xl lg:text-base/[20px] xl:text-xl my-auto">
               {name}
-            </h5>
+            </div>
             <p className="text-mid-gray leading-[21px] xs:text-base xs:leading-[24px]">
               {desc}
             </p>
           </div>
-        </a>
+        </Link>
       ))}
     </div>
     <SeeAllLink href="#">Show all cases</SeeAllLink>

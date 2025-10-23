@@ -74,18 +74,18 @@ const Footer: FC = () => {
                 <div className="space-y-6 text-sm leading-relaxed xs:grid xs:grid-cols-2 xs:gap-x-6 md:flex md:flex-col">
                   <AccentGroup name="Contact Us">
                     <div>
-                      <a
+                      <Link
                         href="mailto:hello@deepinspire.com"
                         className="hover:underline block"
                       >
                         hello@deepinspire.com
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         href="tel:442045771162"
                         className="hover:underline block"
                       >
                         +44 20 4577 1162
-                      </a>
+                      </Link>
                     </div>
                   </AccentGroup>
                   <AccentGroup

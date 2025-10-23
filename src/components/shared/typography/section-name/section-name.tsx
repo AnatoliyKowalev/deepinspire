@@ -9,7 +9,7 @@ const SectionName: FC<SectionNameProps> = ({
   withMb = false,
   children,
 }) => (
-  <h5
+  <div
     className={cn(
       "font-montserrat leading-normal font-bold text-xl",
       className,
@@ -19,7 +19,7 @@ const SectionName: FC<SectionNameProps> = ({
     )}
   >
     {children}
-  </h5>
+  </div>
 );
 
 export default SectionName;

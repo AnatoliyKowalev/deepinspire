@@ -18,7 +18,7 @@ const OurApproach: FC = () => (
         <div className="xl:col-span-6 flex gap-3.75" key={icon}>
           <Icon className="text-2xl" icon={icon} />
           <div className="grid gap-3.75">
-            <h5 className="font-montserrat font-bold text-xl/6">{name}</h5>
+            <div className="font-montserrat font-bold text-xl/6">{name}</div>
             <p className="text-base xs:text-lg">{desc}</p>
           </div>
         </div>

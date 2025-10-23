@@ -1,13 +1,14 @@
 import React, { FC, PropsWithChildren } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 import NavDropdown from "./nav-dropdown";
+import Icon from "@/components/shared/icon";
 import NavLinks from "@/components/shared/navigation/nav-links";
 
 import { SM } from "@/lib/style-mofifiers";
 
 import { NavGroupProps } from "./interfaces";
-import Icon from "../../icon";
 
 const NavGroup: FC<PropsWithChildren<NavGroupProps>> = ({
   children,
@@ -39,7 +40,7 @@ const NavGroup: FC<PropsWithChildren<NavGroupProps>> = ({
               </div>
             ))}
           </div>
-          <a
+          <Link
             href={info.link}
             className="col-span-5 h-full relative group/info overflow-hidden min-h-[310px]"
           >
@@ -51,13 +52,13 @@ const NavGroup: FC<PropsWithChildren<NavGroupProps>> = ({
               alt={info.title}
             />
             <div className="p-7 bg-grey-3/90 absolute left-0 bottom-0 w-full grid gap-5 opacity-0 group-hover/info:opacity-100 group-hover/info:translate-y-[0px] transform translate-y-[10px] transition-all duration-200 ease-linear">
-              <h6 className="text-white text-lg w-fit relative">
+              <div className="text-white text-lg w-fit relative">
                 {info.title}
                 <Icon
                   className="absolute -right-2 top-[50%] transform translate-x-[100%] translate-y-[-48%] text text-2xl"
                   icon="arrow-right"
                 />
-              </h6>
+              </div>
               <div className="flex items-center gap-4">
                 {info.tags.map((tag, idx) => (
                   <div
@@ -69,7 +70,7 @@ const NavGroup: FC<PropsWithChildren<NavGroupProps>> = ({
                 ))}
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

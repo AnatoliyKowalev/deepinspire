@@ -28,9 +28,9 @@ const Feedback: FC<FeedbackProps> = ({
           alt={name}
         />
         <div className="grid place-content-center place-items-start">
-          <h5 className="font-montserrat text-lg/[22px] font-bold mb-2">
+          <div className="font-montserrat text-lg/[22px] font-bold mb-2">
             {name}
-          </h5>
+          </div>
           <div className="whitespace-pre-line xs:whitespace-normal text-xs/normal xs:text-sm mb-3">
             {role}
           </div>

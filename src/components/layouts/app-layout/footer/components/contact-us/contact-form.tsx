@@ -1,6 +1,7 @@
 "use client";
 
 import React, { FC } from "react";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 
 import Icon from "@/components/shared/icon";
@@ -108,13 +109,13 @@ const ContactForm: FC = () => {
           <div className="md:flex md:justify-between items-center space-y-6 md:space-y-0 lg:gap-7">
             <div className="whitespace-pre-line text-[10px] md:max-w-52 lg:max-w-35 xl:max-w-fit">
               By sending this form, I confirm that I have read and accept the
-              <a
+              <Link
                 href="/privacy-policy"
                 target="_blank"
                 className="underline ml-1"
               >
                 Privacy Policy
-              </a>
+              </Link>
               .
             </div>
             <Button
