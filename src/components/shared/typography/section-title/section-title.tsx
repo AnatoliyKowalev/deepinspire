@@ -8,14 +8,14 @@ const SectionTitle: FC<PropsWithChildren<ElProps>> = ({
   className,
   children,
 }) => (
-  <h4
+  <div
     className={cn(
       "leading-none font-medium text-4xl xs:text-[50px]",
       className
     )}
   >
     {children}
-  </h4>
+  </div>
 );
 
 export default SectionTitle;

@@ -25,6 +25,7 @@ const SocialMediaLinks: FC<SocialMediaLinksProps> = ({
           "relative after:content-[''] after:w-[5px] after:h-[5px] after:rounded-full after:bg-white after:absolute after:left-[50%] after:-bottom-2 after:transform after:translate-x-[-50%] after:translate-y-full after:opacity-0 hover:after:opacity-100 active:after:opacity-100 hover:text-accent-primary active:text-accent-primary hover:after:bg-accent-primary active:after:bg-accent-primary after:transition-all after:duration-300 transition-all duration-300",
           linkClassName
         )}
+        aria-label={icon}
         key={idx}
       >
         <Icon icon={icon} />

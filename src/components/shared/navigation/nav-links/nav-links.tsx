@@ -11,6 +11,7 @@ const NavLinks: FC<NavLinksProps> = ({ title, links }) => (
         <Link
           href={href}
           className="relative font-normal hover:text-white group-[.hs]/header:hover:text-accent-secondary group-[.hs]/header:active:text-accent-secondary relative after:content-[''] after:w-[5px] after:h-[5px] after:rounded-full after:bg-grey-2 group-[.hs]/header:after:bg-accent-secondary  after:absolute after:-left-2 lg:after:-left-5 after:top-[50%] after:transform after:translate-x-[-100%] after:translate-y-[-50%] after:opacity-0 hover:after:opacity-100 active:after:opacity-100"
+          aria-label={text}
           key={idx}
         >
           {text}
