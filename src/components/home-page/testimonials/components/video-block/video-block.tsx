@@ -1,6 +1,7 @@
 "use client";
 
-import React, { FC, useCallback, useState } from "react";
+import React, { FC, useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 import Icon from "@/components/shared/icon";
 import { Button } from "@/components/ui/button";
@@ -21,7 +22,33 @@ const VideoBlock: FC<VideoBlockProps> = ({
 }) => {
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
 
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   const onClose = useCallback(() => setVideoUrl(null), []);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.01) {
+            console.log("go");
+            el.play().catch(() => {}); // prevent promise rejection
+          } else {
+            el.pause();
+          }
+        });
+      },
+      {
+        threshold: [0.01], // start reacting when at least 1% visible
+      }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div
@@ -48,18 +75,27 @@ const VideoBlock: FC<VideoBlockProps> = ({
         </div>
         Watch video
       </Button>
-      <video
-        preload="none"
-        poster={preload}
-        className="h-full md:w-full object-cover absolute left-0 top-0 !z-0"
-        playsInline
-        autoPlay
-        muted
-        loop
-      >
-        <source src={video} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div className="h-full md:w-full absolute left-0 top-0 !z-0">
+        <Image
+          src={preload}
+          alt="Video preview"
+          loading="lazy"
+          className="object-cover absolute left-0 top-0 !z-0"
+          fill
+        />
+        <video
+          ref={videoRef}
+          preload="none"
+          // poster={preload}
+          className="w-full h-full object-cover absolute left-0 top-0 !z-0"
+          playsInline
+          muted
+          loop
+        >
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       {videoUrl ? <YoutubeModal url={videoUrl} onClose={onClose} /> : null}
     </div>
   );
