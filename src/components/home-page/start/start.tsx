@@ -43,10 +43,10 @@ const Start: FC = () => {
           className="backdrop-blur-[10px] bg-light-texting/90 rounded-[10px] py-8 px-6 xs:px-8 md:px-[50px] md:pt-14 md:pb-19 xl:pb-25 lg:max-w-[690px] xl:max-w-[729px]"
         >
           <Icon icon="flash" className="text-5xl" />
-          <h4 className="mt-4 md:mt-6 mb-5 text-2xl/normal font-montserrat font-bold xs:text-[28px]">
+          <div className="mt-4 md:mt-6 mb-5 text-2xl/normal font-montserrat font-bold xs:text-[28px]">
             We start by understanding people’s needs and pains. Then we build
             tech solutions to address them.
-          </h4>
+          </div>
           <SectionDesc>
             The best digital products go beyond mere functionality. They create
             an emotional connection and become a significant part of

@@ -70,7 +70,9 @@ const Footer: FC = () => {
             <div className="grid md:grid-cols-2 md:gap-x-7.5 xl:col-span-9 xl:gap-31">
               {/* Contact us */}
               <div className="grid gap-7.5">
-                <h6 className="font-montserrat text-xl font-bold">Contacts</h6>
+                <div className="font-montserrat text-xl font-bold">
+                  Contacts
+                </div>
                 <div className="space-y-6 text-sm leading-relaxed xs:grid xs:grid-cols-2 xs:gap-x-6 md:flex md:flex-col">
                   <AccentGroup name="Contact Us">
                     <div>
@@ -108,9 +110,9 @@ const Footer: FC = () => {
               </div>
               {/* Discover DeepInspire */}
               <div className="grid gap-7.5 mt-12.5 md:mt-0">
-                <h6 className="font-montserrat text-xl font-bold">
+                <div className="font-montserrat text-xl font-bold">
                   Discover DeepInspire
-                </h6>
+                </div>
                 <div className="grid gap-5 text-sm leading-relaxed xs:grid-cols-2 xs:gap-x-0 md:flex md:flex-col">
                   {DISCOVER_LINKS.map(({ link, text }, key) => (
                     <Link href={link} key={key}>
