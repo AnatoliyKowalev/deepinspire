@@ -20,8 +20,8 @@ export const METADATA: Metadata = {
       { url: "/apple-icon-180x180.png", sizes: "180x180" },
     ],
   },
-  description: "",
-  keywords: [],
+  description: "Some description",
+  keywords: ["some", "keywords"],
   // openGraph: {
   //   title: "",
   //   description:
