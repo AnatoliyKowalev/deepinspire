@@ -1,35 +1,33 @@
 "use client";
 
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import ContactUs from "./components/contact-us";
 import AccentGroup from "./components/accent-group";
 import SocialMediaLinks from "@/components/shared/social-media-links";
 
 import { YEAR } from "@/lib/constants";
-import { DISCOVER_LINKS } from "./constants";
+import { DISCOVER_LINKS, PAGES_HIDE_CONTACT_FORM } from "./constants";
+import { cn } from "@/lib/utils";
 
 const Footer: FC = () => {
-  // useEffect(() => {
-  //   const script = document.createElement("script");
-  //   script.src = "https://widget.clutch.co/static/js/widget.js";
-  //   script.async = true;
-  //   document.body.appendChild(script);
+  const [mounted, setMounted] = useState(false);
 
-  //   setTimeout(() => {
-  //     // @ts-expect-error declared option
-  //     window?.CLUTCHCO?.Init();
-  //   }, 100);
+  useEffect(() => setMounted(true), []);
 
-  //   return () => {
-  //     document.body.removeChild(script);
-  //   };
-  // }, []);
+  const [widgetLoaded, setWidgetLoaded] = useState(false);
 
   const footerRef = useRef<HTMLElement | null>(null);
-  const [widgetLoaded, setWidgetLoaded] = useState(false);
+
+  const pathname = usePathname();
+  const route = pathname.split("/")[1];
+  const hideForm = useMemo(
+    () => PAGES_HIDE_CONTACT_FORM.some((page) => route === page),
+    [pathname]
+  );
 
   useEffect(() => {
     if (!footerRef.current) return;
@@ -61,11 +59,22 @@ const Footer: FC = () => {
     };
   }, [widgetLoaded]);
 
+  if (!mounted) return null;
+
   return (
     <footer className="overflow-hidden" ref={footerRef}>
-      <ContactUs />
-      <div className="z-1 bg-grey-3 w-full -mt-35 pt-35">
-        <div className="container mt-11.5 xs:mt-12.5 md:mt-23 text-light-texting">
+      {hideForm ? null : <ContactUs />}
+      <div
+        className={cn("z-1 bg-grey-3 w-full", hideForm ? "" : "-mt-35 pt-35")}
+      >
+        <div
+          className={cn(
+            "container text-light-texting",
+            hideForm
+              ? "pt-11.5 xs:pt-12.5 md:pt-23"
+              : "mt-11.5 xs:mt-12.5 md:mt-23"
+          )}
+        >
           <div className="grid xl:grid-cols-12">
             <div className="grid md:grid-cols-2 md:gap-x-7.5 xl:col-span-9 xl:gap-31">
               {/* Contact us */}

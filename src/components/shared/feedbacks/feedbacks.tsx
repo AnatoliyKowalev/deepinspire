@@ -9,25 +9,33 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
+import { cn } from "@/lib/utils";
 import { FEEDBACKS } from "./constants";
 
-const Feedbacks: FC = () => (
-  <div className="h-full w-full bg-light-texting xl:col-span-6 xl:col-start-8 hidden md:flex md:flex-col rounded-lg mt-10 overflow-hidden lg:mt-0">
+import { ElProps } from "@/types/common";
+
+const Feedbacks: FC<ElProps> = ({ className }) => (
+  <div
+    className={cn(
+      "w-full bg-light-texting rounded-lg mt-10 overflow-hidden lg:mt-0 xl:col-span-6 xl:col-start-8 flex md:flex-col",
+      className
+    )}
+  >
     <Carousel
-      className="h-full flex flex-col pb-8.5"
+      className="h-fit flex flex-col pb-8.5 gap-0"
       opts={{
         loop: true,
       }}
     >
-      <CarouselContent className="h-full" wrapperClassName="w-full h-full">
+      <CarouselContent className="h-fit" wrapperClassName="w-full pb-15">
         {FEEDBACKS.map(({ text, name, role, photo }, idx) => (
-          <CarouselItem className="h-full" key={idx}>
-            <div className="h-full pt-10 px-12">
+          <CarouselItem className="h-fit" key={idx}>
+            <div className="grid h-fit w-full pt-10 md:px-12 text-center md:text-left lg:text-center">
               <Icon className="text-2xl" icon="quote-up" />
-              <p className="font-montserrat text-base font-bold mt-3 mb-7.5">
+              <p className="font-montserrat text-base/loose font-bold mt-3 mb-7 md:mb-7.5">
                 {text}
               </p>
-              <div className="flex items-center gap-12.5">
+              <div className="flex items-center flex-col gap-6 md:flex-row md:gap-12.5 lg:flex-col lg:gap-4.5">
                 <div className="relative min-w-fit">
                   <Image
                     className="rounded-full size-28"
@@ -51,7 +59,7 @@ const Feedbacks: FC = () => (
       </CarouselContent>
       <CarouselDots />
     </Carousel>
-    <div className="bg-mid-gray h-25.25 flex items-center justify-center relative">
+    <div className="mt-auto bg-mid-gray h-25.25 flex items-center justify-center relative">
       <Image
         className="absolute top-0 h-full z-0 object-contain left-[28%] lg:left-[13%] xl:left-[14%]"
         src="/img/contact-us/bottom.png"

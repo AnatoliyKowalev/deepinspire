@@ -17,7 +17,7 @@ import { FEEDBACKS } from "./constants";
 const FeedbacksCarousel: FC = () => (
   <Carousel
     plugins={[AutoHeight()]}
-    className="py-15 md:py-17.5 xl:py-20 px-[25px] xs:px-0"
+    className="py-15 md:py-17.5 xl:py-20 px-[25px] xs:px-0 xs:gap-4.5 md:gap-10 xl:gap-0"
     opts={{
       loop: true,
       align: "start",

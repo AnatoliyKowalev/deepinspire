@@ -70,7 +70,7 @@ export default function Header() {
               />
             ))}
           </button>
-          <Link href="#" aria-label="Logo">
+          <Link href="/" aria-label="Logo">
             <Icon
               icon="logo"
               className="text-light-texting group-[.hs]/header:text-accent-secondary text-4xl xl:text-[32px]"
@@ -81,7 +81,7 @@ export default function Header() {
             <Link
               className="px-5 ml-auto group-[.hs]/header:text-accent-secondary 
               group-[.hs]/header:hover:bg-accent-secondary group-[.hs]/header:hover:text-white"
-              href="#"
+              href="/contact-us"
             >
               Contact us
             </Link>

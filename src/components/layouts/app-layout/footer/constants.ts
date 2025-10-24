@@ -28,3 +28,5 @@ export const DISCOVER_LINKS = [
     text: "Blog",
   },
 ];
+
+export const PAGES_HIDE_CONTACT_FORM = ["contact-us"];

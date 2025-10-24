@@ -33,7 +33,6 @@ const HomePage: FC = () => (
     <WhyDeepnspire />
     <OurApproach />
     <Awards />
-    {/* <div className="bg-[pink] h-[100vh] z-[-1] relative"></div> */}
   </>
 );
 

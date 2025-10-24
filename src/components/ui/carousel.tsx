@@ -124,7 +124,7 @@ function Carousel({
       <div
         onKeyDownCapture={handleKeyDown}
         className={cn(
-          "relative xs:flex xs:items-center xs:justify-center xs:gap-4.5 md:gap-10 xl:gap-0",
+          "relative xs:flex xs:items-center xs:justify-center",
           className
         )}
         role="region"
@@ -154,7 +154,7 @@ function CarouselContent({
       <div
         className={cn(
           "flex transition-[height] duration-200",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+          orientation === "horizontal" ? "-ml-4 xl:-ml-15" : "-mt-4 flex-col",
           className
         )}
         {...props}
