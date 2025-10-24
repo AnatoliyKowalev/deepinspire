@@ -75,7 +75,7 @@ const VideoBlock: FC<VideoBlockProps> = ({
         </div>
         Watch video
       </Button>
-      <div className="h-full md:w-full absolute left-0 top-0 !z-0">
+      <div className="h-full w-full absolute left-0 top-0 !z-0">
         <Image
           src={preload}
           alt="Video preview"
