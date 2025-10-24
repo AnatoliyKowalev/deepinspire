@@ -83,7 +83,7 @@ const VideoBlock: FC<VideoBlockProps> = ({
           className="object-cover absolute left-0 top-0 !z-0"
           fill
         />
-        {/* <video
+        <video
           ref={videoRef}
           preload="none"
           className="w-full h-full object-cover absolute left-0 top-0 !z-0"
@@ -93,7 +93,7 @@ const VideoBlock: FC<VideoBlockProps> = ({
         >
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
+        </video>
       </div>
       {videoUrl ? <YoutubeModal url={videoUrl} onClose={onClose} /> : null}
     </div>
