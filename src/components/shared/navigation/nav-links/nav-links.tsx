@@ -4,7 +4,7 @@ import Link from "next/link";
 import { NavLinksProps } from "./interfaces";
 
 const NavLinks: FC<NavLinksProps> = ({ title, links }) => (
-  <div className="h-fit mt-auto">
+  <div className="h-fit mt-auto relative">
     {title ? <p className="mb-8 text-base font-semibold">{title}</p> : null}
     <div className="grid gap-6">
       {links.map(({ text, href }, idx) => (
