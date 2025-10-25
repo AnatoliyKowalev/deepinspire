@@ -1,6 +1,11 @@
 import React, { FC } from "react";
 
-import { Banner, Contact, OurTeam } from "@/components/contact-us";
+import {
+  Banner,
+  Contact,
+  HelloAnimation,
+  OurTeam,
+} from "@/components/contact-us";
 
 const ContactUsPage: FC = () => {
   return (
@@ -8,6 +13,7 @@ const ContactUsPage: FC = () => {
       <Banner />
       <Contact />
       <OurTeam />
+      <HelloAnimation />
     </>
   );
 };

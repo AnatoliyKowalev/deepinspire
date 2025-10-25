@@ -26,7 +26,7 @@ const Footer: FC = () => {
   const route = pathname.split("/")[1];
   const hideForm = useMemo(
     () => PAGES_HIDE_CONTACT_FORM.some((page) => route === page),
-    [pathname]
+    [route]
   );
 
   useEffect(() => {

@@ -21,7 +21,6 @@ import {
 import { cn } from "@/lib/utils";
 
 import { ContactFormProps, FormData } from "./interfaces";
-import { ElProps } from "@/types/common";
 
 const ContactForm: FC<ContactFormProps> = ({ v2 }) => {
   const form = useForm<FormData>({

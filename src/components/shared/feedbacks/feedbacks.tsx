@@ -17,7 +17,7 @@ import { ElProps } from "@/types/common";
 const Feedbacks: FC<ElProps> = ({ className }) => (
   <div
     className={cn(
-      "w-full bg-light-texting rounded-lg mt-10 overflow-hidden lg:mt-0 xl:col-span-6 xl:col-start-8 flex flex-col md:flex-row lg:flex-col",
+      "w-full bg-light-texting rounded-lg mt-10 overflow-hidden lg:mt-0 xl:col-span-6 xl:col-start-8 flex flex-col",
       className
     )}
   >
