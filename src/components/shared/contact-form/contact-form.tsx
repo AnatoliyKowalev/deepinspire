@@ -152,7 +152,6 @@ const ContactForm: FC<ContactFormProps> = ({ v2 }) => {
               By sending this form, I confirm that I have read and accept the
               <Link
                 href="/privacy-policy"
-                target="_blank"
                 className={cn("underline ml-1", {
                   "text-accent-primary": !v2,
                 })}

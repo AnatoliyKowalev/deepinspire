@@ -1,17 +1,18 @@
-import React, { FC, PropsWithChildren } from "react";
+import React, { FC } from "react";
 
 import { cn } from "@/lib/utils";
 
-import { ElProps } from "@/types/common";
+import { SectionTitleProps } from "./interfaces";
 
-const SectionTitle: FC<PropsWithChildren<ElProps>> = ({
-  className,
-  children,
-}) => (
+const SectionTitle: FC<SectionTitleProps> = ({ className, size, children }) => (
   <div
     className={cn(
       "leading-none font-medium text-4xl xs:text-[50px]",
-      className
+      className,
+      {
+        "font-montserrat font-bold text-4xl/normal xs:text-[50px]":
+          size === "xl",
+      }
     )}
   >
     {children}

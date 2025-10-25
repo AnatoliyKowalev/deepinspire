@@ -1,9 +1,9 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.woff?igkql4") format("woff");
+  src: url("fonts/icomoon.woff?go0374") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 [class^="icon-"],
@@ -22,6 +22,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-email:before {
+  content: "\e924";
+}
 .icon-quote-up:before {
   content: "\e923";
 }

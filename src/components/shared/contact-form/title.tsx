@@ -1,9 +1,11 @@
 import React, { FC } from "react";
 
+import { SectionTitle } from "../typography";
+
 const FormTitle: FC = () => (
-  <div className="font-montserrat font-bold text-4xl/normal mb-2 xs:text-[50px]">
+  <SectionTitle className="mb-2" size="xl">
     Contact us
-  </div>
+  </SectionTitle>
 );
 
 export default FormTitle;
