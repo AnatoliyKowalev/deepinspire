@@ -18,12 +18,13 @@ const LottieBox: FC<LottieOptions> = ({ ...rest }) => {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
+
         if (entry.isIntersecting) {
           play();
           observer.disconnect();
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.5 }
     );
 
     if (containerRef.current) observer.observe(containerRef.current);
