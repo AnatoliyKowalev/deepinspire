@@ -21,7 +21,7 @@ const ViewNav: FC<Pick<NavGroupProps, "variant">> = ({ variant }) => (
     </NavGroup>
     <NavLink href="#">CASE STUDIES</NavLink>
     <NavLink href="#">TESTIMONIALS</NavLink>
-    <NavLink href="#">ABOUT US</NavLink>
+    <NavLink href="/about-us">ABOUT US</NavLink>
     <NavLink href="#">BLOG</NavLink>
   </>
 );

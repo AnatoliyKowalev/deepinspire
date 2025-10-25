@@ -74,3 +74,5 @@ export const FINTECH_INFO = {
   tags: ["Fintech", "Trading"],
   bgSrc: "/img/header_digital_banking_solution.jpg",
 };
+
+export const PAGES_DARK_HEADER = ["", "contact-us"];

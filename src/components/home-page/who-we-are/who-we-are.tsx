@@ -3,9 +3,9 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import { useScroll, useSpring } from "framer-motion";
 
-import Icon from "@/components/shared/icon";
 import InfoBlock from "./components/info-block";
 import ScrollIndicator from "./components/scroll-indicator";
+import RotatingLogo from "@/components/shared/rotating-logo";
 import { SectionName } from "@/components/shared/typography";
 import { BtScrollSlide, BtSlide } from "@/components/shared/motion";
 
@@ -58,14 +58,13 @@ const WhoWeAre: FC = () => {
           </BtScrollSlide>
         ))}
       </div>
-      <Icon
+      <RotatingLogo
         className={cn(
-          "text-[115px] text-dividers opacity-0 sticky top-[30%] h-fit pointer-events-none transition-all duration-300 animate-deepspinner col-span-1 col-start-12 hidden lg:block 1xl:transform 1xl:translate-x-full",
+          "opacity-0 sticky top-[30%] col-span-1 col-start-12 hidden lg:block 1xl:transform 1xl:translate-x-full",
           {
             "lg:opacity-100": showDeepspinner,
           }
         )}
-        icon="deepspinner"
       />
     </section>
   );

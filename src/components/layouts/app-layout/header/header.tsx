@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 
 import MobileNav from "./mobile-nav";
@@ -10,10 +10,21 @@ import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
 import { ARR_3 } from "@/lib/constants";
+import { usePathname } from "next/navigation";
+import { PAGES_DARK_HEADER } from "./constants";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const pathname = usePathname();
+  const route = pathname.split("/")[1];
+  const darkHeader = useMemo(
+    () => PAGES_DARK_HEADER.some((page) => route === page),
+    [route]
+  );
+
+  const isLight = scrolled || !darkHeader;
 
   useEffect(() => {
     if (open) {
@@ -38,13 +49,17 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [route]);
+
   return (
     <header
       className={cn(
         "fixed top-0 left-0 w-screen h-(--h-header) z-10 transition-all duration-300 group/header after:content-[''] after:h-full after:w-full after:shadow-header after:absolute after:left-0 after:top-0 after:pointer-events-none after:z-51",
-        `${scrolled ? "bg-white text-dark-texting" : "bg-accent-dark/70 text-grey-2"}`,
+        `${isLight ? "bg-white text-dark-texting" : "bg-accent-dark/70 text-grey-2"}`,
         {
-          hs: scrolled,
+          hs: isLight,
         }
       )}
     >

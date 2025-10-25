@@ -38,7 +38,12 @@ const WhyDeepnspire: FC = () => {
         >
           <SectionName>WHY DEEPINSPIRE:</SectionName>
         </motion.div>
-        <div className="font-montserrat font-bold text-[28px]/normal xs:text-[30px]/normal 1xl:text-4xl whitespace-pre-line xs:whitespace-normal">
+        <div
+          className={cn(
+            "whitespace-pre-line xs:whitespace-normal",
+            SM.bannerTitle
+          )}
+        >
           <motion.div
             initial={{ translateY: "40px", opacity: 0 }}
             animate={

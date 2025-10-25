@@ -1,6 +1,6 @@
 export const DISCOVER_LINKS = [
   {
-    link: "#",
+    link: "/about-us",
     text: "About Us",
   },
   {
@@ -29,4 +29,4 @@ export const DISCOVER_LINKS = [
   },
 ];
 
-export const PAGES_HIDE_CONTACT_FORM = ["contact-us"];
+export const PAGES_HIDE_CONTACT_FORM = ["contact-us", "about-us"];

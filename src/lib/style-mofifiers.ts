@@ -8,4 +8,6 @@ export const SM = {
     "text-grey-2 size-10 hover:bg-accent-primary hover:text-white active:bg-accent-primary active:text-white rounded-full cursor-pointer absolute xs:relative xs:translate-y-[8%]",
   accentPrimaryBtn:
     "text-accent-primary block text-center text-xl font-bold font-montserrat xs:w-fit flex items-center cursor-pointer",
+  bannerTitle:
+    "font-montserrat font-bold text-[28px]/normal xs:text-[30px]/normal xl:text-3xl 1xl:text-4xl xl:leading-normal",
 };
